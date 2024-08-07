@@ -7,6 +7,7 @@ const links = [
   { name: "Home", url: "/" },
   { name: "Tools", url: "/tools" },
   { name: "Projects", url: "/projects" },
+  { name: "Resume", url: "/resume" },
 ];
 
 const Header = () => {
@@ -18,7 +19,7 @@ const Header = () => {
   return (
     <div className="w-full flex p-2 fixed top-0">
       <div className="max-w-[800px] w-full mx-auto flex justify-between items-center">
-        <div className="flex items-end gap-2">
+        <div className="flex items-end gap-2 text-nowrap">
           <div className="pr-2">Jayce Abenales</div>
           {links.map((link, index) => {
             return (

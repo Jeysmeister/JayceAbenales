@@ -1,10 +1,12 @@
+"use client";
+
 import Image from "next/image";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export default function Home() {
   return (
     <div className="h-full w-full flex items-center justify-center">
-      <Card className="hidden md:table">
+      <Card className={`hidden md:table`}>
         <CardHeader className="w-full flex justify-center items-center text-2xl relative">
           <CardTitle className="font-light">Developer Identification</CardTitle>
           <div className="absolute top-6 right-6 text-xs">ID # : 915124512</div>
