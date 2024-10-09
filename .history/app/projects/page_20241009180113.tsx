@@ -15,7 +15,7 @@ const projects = [
 
 const Page = () => {
   return (
-    <motion.div initial={{ opacity: 0, y: 200 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="flex items-center justify-center w-full h-full">
+    <motion.div initial={{ opacity: 0, y: -200 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="flex items-center justify-center w-full h-full">
       <div className="max-w-[18rem] sm:max-w-sm md:max-w-md p-4">
         <Carousel>
           <CarouselContent>

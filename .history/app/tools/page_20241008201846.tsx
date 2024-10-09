@@ -24,29 +24,19 @@ const tools = [
   { name: "C#", url: "/CSharp.png" },
 ];
 
-const container = {
-  hidden: { opacity: 1, scale: 0 },
-  visible: {
-    opacity: 1,
-    scale: 1,
-    transition: {
-      delayChildren: 0.1,
-      staggerChildren: 0.1,
-    },
-  },
-};
-
 const Page = () => {
   return (
-    <motion.div initial={{ opacity: 0, x: 100 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.5 }} className="flex items-center justify-center w-full h-full">
-      <Card>
-        <motion.div variants={container} initial="hidden" animate="visible" className="p-4 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 justify-center items-center">
-          {tools.map((tool, index) => {
-            return <Tool tool={tool} key={index} index={index} />;
-          })}
-        </motion.div>
-      </Card>
-    </motion.div>
+    <div>
+      <motion.div initial={{ opacity: 0, x: 100 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.5 }} className="flex items-center justify-center w-full h-full">
+        <Card className="p-4 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 justify-center items-center">
+          <motion.div>
+            {tools.map((tool, index) => {
+              return <Tool tool={tool} key={index} index={index} />;
+            })}
+          </motion.div>
+        </Card>
+      </motion.div>
+    </div>
   );
 };
 

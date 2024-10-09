@@ -17,7 +17,7 @@ const Header = () => {
     router.push(url);
   };
   return (
-    <div className="w-full flex p-2 fixed top-0 z-10">
+    <div className="w-full flex p-2 fixed top-0">
       <div className="max-w-[800px] w-full mx-auto flex justify-between items-center">
         <div className="flex items-end gap-2 text-nowrap">
           <div className="pr-2">Jayce Abenales</div>
@@ -25,7 +25,11 @@ const Header = () => {
             return (
               <div
                 key={index}
-                className={`${pathName !== link.url ? "text-gray-400 hover:text-primary cursor-pointer " : ""}font-light text-sm`}
+                className={`${
+                  pathName !== link.url
+                    ? "text-gray-400 hover:text-primary cursor-pointer "
+                    : ""
+                }font-light text-sm`}
                 onClick={() => {
                   clickHandler(link.url);
                 }}

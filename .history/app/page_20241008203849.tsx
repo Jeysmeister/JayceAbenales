@@ -37,11 +37,9 @@ export default function Home() {
           </motion.div>
         </CardHeader>
         <CardContent className="flex divide-x-[1px] gap-4">
-          <motion.div initial={{ opacity: 0, y: 200 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
-            <Card className="p-2">
-              <Image className="rounded-lg " src={"/IDPicture.png"} alt="IDPicture" height={200} width={200} />
-            </Card>
-          </motion.div>
+          <Card className="p-2">
+            <Image className="rounded-lg " src={"/IDPicture.png"} alt="IDPicture" height={200} width={200} />
+          </Card>
           <div className="min-h-full">
             <div className="pl-4 flex gap-8 text-sm h-full items-center">
               <div className="flex flex-col gap-2 text-nowrap">

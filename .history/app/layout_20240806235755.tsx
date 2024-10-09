@@ -22,11 +22,18 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={kanit.className}>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
           <div className="h-screen w-screen overflow-hidden">
             <Header />
             <SideNav />
-            <div className="max-w-[800px] w-full flex mx-auto h-full justify-center items-center">{children}</div>
+            <div className="max-w-[800px] w-full flex mx-auto h-full">
+              {children}
+            </div>
           </div>
         </ThemeProvider>
       </body>
